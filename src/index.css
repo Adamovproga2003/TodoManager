@@ -1,0 +1,265 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#root{
+    height: 100vh;
+}
+
+.hoverItem{
+    box-shadow: 0 0 10px #1d1d1d !important;
+}
+
+.dark .hoverItem{
+    box-shadow: 0 0 10px #FAFAFA !important;
+}
+
+.todoManager{
+    transition: all .3s linear;
+    height: 100%;
+}
+
+.dark{
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.dark input{
+    background-color: #1d1d1d;
+}
+
+.dark input:focus, .dark input:active, .dark input:-webkit-autofill, .dark input:-webkit-autofill:focus{
+    background-color: #2A2A2A !important;
+    color: #fff;
+}
+
+.dark .card{
+    background-color: #2A2A2A;
+}
+
+.dark .card button{
+    color: #fff;
+}
+
+.dark .disabled .page-link{
+    background-color: #4D4D4D !important;
+    color: #CFCFCF !important;
+}
+
+.dark .page-link{
+    background-color: #2A2A2A;
+    color: #fff;
+}
+
+.dark .completed-card{
+    background-color: #1B1B1B !important;
+    color: #fff !important;
+}
+
+.card{
+    transition: all .2s ease-in-out;
+}
+
+.card a{
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.card a:hover{
+    color: #FAFAFA;
+    font-size: 1.6rem !important;
+}
+
+.dark .card a:hover{
+    color: #fff;
+    font-size: 1.6rem !important;
+}
+
+.card.bg-primary:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px 2px rgba(13, 110, 253, 0.2);
+}
+
+.card.bg-warning:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px 2px rgba(255, 193, 7, 0.2);
+}
+
+.card.bg-success:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px 2px rgba(25, 135, 84, 0.2);
+}
+
+.card.bg-secondary:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px 2px rgba(108, 117, 125, 0.2);
+}
+
+.card-body .btn{
+    transition: all .2s ease-in-out;
+    color: #fff;
+}
+
+.card-body .btn:focus, .card-body .btn:active{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.bg-primary .card-body .btn:hover{
+    cursor:text;
+    color: #0D6EFD;
+    transform: scale(1.1);
+}
+
+.bg-warning .card-body .btn:hover{
+    cursor:text;
+    color: #FFC107;
+    transform: scale(1.1);
+}
+
+.bg-success .card-body .btn:hover{
+    cursor:not-allowed;
+    color: #198754;
+}
+
+.bg-secondary .card-body .btn:hover{
+    cursor:text;
+    color: #6C757D;
+    transform: scale(1.1);
+}
+
+.board .todo:hover{
+    cursor: pointer;
+}
+
+.disabled:hover{
+    cursor: not-allowed;
+}
+
+.dark .page-link:hover{
+    background-color: #0046D5
+}
+
+.edit-div{
+    width: 50%;
+}
+
+.div-progress{
+    width: 45%;
+    text-align: center;
+}
+
+.button-todo-div button{
+    width: 100%;
+}
+
+.card-body{
+    position: relative;
+    z-index: 20;
+}
+
+.card-body .control-div{
+    position: absolute;
+    right: 0;
+    transition: right .2s ease-in-out, opacity .2s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+.card-body:hover .control-div.remove, .card-body .control-div.remove:hover{
+    right: -70px;
+    opacity: 1;
+}
+
+.card-body:hover .control-div, .card-body .control-div:hover{
+    right: -20px;
+    opacity: 1;
+}
+
+.card-body .control-div button{
+    cursor: pointer !important;
+    color: #fff;
+}
+
+.card-body .control-div button:hover{
+    color: #fff !important;
+}
+
+.not-allowed-responsive{
+    display: none;
+}
+
+.stripe-div{
+    background: repeating-linear-gradient(
+  -55deg,
+  transparent,
+  transparent 10px,
+  rgba(56,166,115, .1) 10px,
+  rgba(56,166,115, .1) 20px
+);
+}
+
+.stripe-div:hover{
+    background: repeating-linear-gradient(
+  -55deg,
+  transparent,
+  transparent 10px,
+  rgba(56,166,115, .15) 10px,
+  rgba(56,166,115, .15) 20px
+);
+}
+
+.fetch-label{
+    background-color: #212529;
+}
+
+.fetch-container{
+    background-color: #595C5F;
+}
+
+.card-div{
+    position: relative;
+}
+
+.saved-before{
+    position: absolute;
+    background-color: #FFC107;
+    box-shadow: 0 0 10px #FFC107;
+}
+
+@media screen and (max-width: 860px) {
+    .not-allowed-responsive{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .board{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .edit-div {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .edit-div {
+      width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 475px) {
+    .edit-div {
+      width: 40%;
+    }
+    .div-progress{
+        width: 50%;
+    }
+}
